@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>StudyBuddy — Learn better together</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="#" data-page="dashboard"
+          ><span class="brand-mark"><i class="fa-solid fa-book-open"></i></span
+          >StudyBuddy</a
+        >
+        <div class="side-label">WORKSPACE</div>
+        <nav class="nav-list">
+          <button class="nav-item active" data-page="dashboard">
+            <i class="fa-solid fa-house"></i> Dashboard
+          </button>
+          <button class="nav-item" data-page="discover">
+            <i class="fa-solid fa-compass"></i> Discover groups
+          </button>
+          <button class="nav-item" data-page="mygroups">
+            <i class="fa-solid fa-people-group"></i> My groups
+          </button>
+          <button class="nav-item" data-page="sessions">
+            <i class="fa-regular fa-calendar"></i> Study sessions
+          </button>
+          <button class="nav-item" data-page="discussions">
+            <i class="fa-regular fa-comments"></i> Discussions
+          </button>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="side-label">PERSONAL</div>
+          <button class="nav-item" data-page="profile">
+            <i class="fa-regular fa-user"></i> My profile</button
+          ><button class="nav-item" data-page="privacy">
+            <i class="fa-solid fa-shield-halved"></i> Privacy
+          </button>
+          <div class="help-card">
+            <strong>Small steps add up.</strong>
+            <p>Study a little, learn a lot. You’ve got this!</p>
+          </div>
+          <div class="user-mini">
+            <div class="avatar" id="sidebarAvatar">S</div>
+            <div class="user-mini-info">
+              <strong id="sidebarName">Student</strong
+              ><span>StudyBuddy member</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <main class="main-area">
+        <header class="topbar">
+          <button class="mobile-menu icon-btn" id="mobileMenu">☰</button>
+          <div class="breadcrumb">
+            Workspace　›　<strong id="pageLabel">Dashboard</strong>
+          </div>
+          <div class="top-actions">
+            <label class="searchbox"
+              >⌕
+              <input id="globalSearch" placeholder="Search groups..." /></label
+            ><button class="icon-btn" id="notificationBtn">♧</button
+            ><button class="profile-pill" data-page="profile">
+              <span class="avatar small" id="topAvatar">S</span
+              ><span id="topName">Student</span>
+            </button>
+          </div>
+        </header>
+        <section class="page-content" id="pageContent"></section>
+        <footer class="footer">
+          Made for students, by students ·
+          <a href="#" data-page="privacy">Privacy & safety</a>
+        </footer>
+      </main>
+    </div>
+    <div class="toast" id="toast" role="status"></div>
+    <dialog id="modal" class="modal"><div id="modalContent"></div></dialog>
+    <script src="js/app.js"></script>
+  </body>
+</html>
